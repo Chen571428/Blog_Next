@@ -118,7 +118,7 @@ export const integ: IntegrationUserConfig = {
       { name: 'Name', val: theme.title },
       { name: 'Desc', val: theme.description || 'Null' },
       { name: 'Link', val: 'https://github/chen571428' },
-      { name: 'Avatar', val: 'https://blog.statinfer/icu/favicon/favicon.ico' }
+      { name: 'Avatar', val: 'https://blog.statinfer.icu/favicon/favicon.ico' }
     ]
   },
   // Enable page search function
@@ -155,7 +155,7 @@ export const integ: IntegrationUserConfig = {
   waline: {
     enable: true,
     // Server service link
-    server: 'https://blog-next-gamma-five.vercel.app',
+    server: 'walineserver-nine.vercel.app',
     // Refer https://waline.js.org/en/guide/features/emoji.html
     emoji: ['bmoji', 'weibo'],
     // Refer https://waline.js.org/en/reference/client/props.html
