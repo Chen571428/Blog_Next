@@ -12,9 +12,9 @@ import SkillLayout from '@/components/home/SkillLayout.astro'
 import avatar from '@/assets/avatar.png'
 import config from '@/site-config'
 
-const languages = ['Html', 'JavaScript', 'CSS', 'Shell']
-const frontend = ['TypeScript', 'Vite', 'Webpack', 'Astro']
-const backend = ['Vercel', 'Waline']
+const programming = ['C','C++', 'Python','R','Haskell']
+const tools = ['Visual Studio Code','Git','Linux','Photoshop','Illustrator','Pandoc','Obsidian']
+const others = ['Markdown','LaTeX']
 
 const MAX_POSTS = 10
 const allPosts = await getBlogCollection()
@@ -34,13 +34,13 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
       <div class='flex flex-col items-center gap-y-4'>
         <h1 class='text-3xl font-bold'>{config.author}</h1>
         <div class='flex flex-wrap justify-center gap-x-7 gap-y-3'>
-          <Label title='China'>
+          <Label title='China / Beijing'>
             <Icon name='location' class='size-5' slot='icon' />
           </Label>
           <Label
-            title='Source code'
+            title='Github'
             as='a'
-            href='https://github.com/cworld1/astro-theme-pure'
+            href='https://github.com/chen571428/'
             target='_blank'
           >
             <Icon name='github' class='size-5' slot='icon' />
@@ -48,30 +48,24 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
         </div>
       </div>
 
-      {/* Get template */}
-      <a
-        href='https://github.com/cworld1/astro-theme-pure'
-        target='_blank'
-        class='flex flex-row items-center gap-x-3 rounded-full border bg-background px-4 py-2 text-sm shadow-sm transition-shadow hover:shadow-md'
-      >
-        <span class='relative flex items-center justify-center'>
-          <span
-            class='absolute size-2 animate-ping rounded-full border border-green-400 bg-green-400 opacity-75'
-          ></span>
-          <span class='size-2 rounded-full bg-green-400'></span>
-        </span>
-        <p class='font-medium text-muted-foreground'>Get Template</p>
-      </a>
-    </section>
+      
 
     <div id='content' class='animate flex flex-col gap-y-10 md:w-4/5 lg:w-5/6'>
       <Section title='About'>
-        <p class='text-muted-foreground'>Developer / Designer</p>
-        <p class='text-muted-foreground'>
-          Lorem ipsum dolor sit amet, vidit suscipit at mei. Quem denique mea id. Usu ei regione
-          indoctum dissentiunt, cu meliore fuisset mei, vel quod voluptua ne. Ex dicat impedit mel,
-          at eum oratio possit voluptatum.
-        </p>
+        <p class='text-muted-foreground'>Developer / Student</p>
+        <div class='text-muted-foreground'>
+          <p>Hello，我是StatInfer，一个天真的学生。</p>
+          <br>
+          
+        <p>尽管一直有着对计算机的兴趣，但是不知为何通过生物竞赛来到了大学。</p>
+          <br>
+          <p>算上预科在园子里待了一年多，不知为何还是不清楚大学是啥。</p><br>
+
+          <p>目前就读于北京大学元培学院，希望
+          <del>别死在四A大作下</del> 
+          能够进入通班学习人工智能。</p><br>
+          <p> <>是啊，大学是什么呢？<i>人生是什么呢？</i> </p>
+          </div>
         <Button title='More about me' class='w-fit self-end' href='/about' variant='ahead' />
       </Section>
       {
@@ -89,98 +83,64 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
         )
       }
 
-      {
-        /* <Section title='Experience'>
+      <Section title='Experience'>
       <Card
-        heading='Lorem Ipsum'
-        subheading='Sit amet consectetur'
-        date='Dec 2022 - Nov 2023'
-        imagePath='/src/assets/about-astro.png'
-        altText='Lorem, ipsum dolor sit'
-        imageClass='h-12 w-auto md:-start-16'
+        as='a'
+        heading='Peking iGEM 2025'
+        subheading='湿实验 负责人'
+        date='March. 2025 - Dec. 2025'
+        href='https://2025.igem.wiki/peking'
       >
-        <ul class='ms-4 list-disc text-muted-foreground'>
-          <li>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore debitis recusandae, ut
-            molestiae laboriosam pariatur!
-
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, pariatur!</li>
-          </li>
-        </ul>
+        <img
+            class='absolute end-0 z-0 m-0 -my-3 h-full w-1/2 object-cover opacity-50'
+            src='/images/Igem_logo_print_black.svg'
+          />
       </Card>
-      <Card
-        heading='Lorem Ipsum'
-        subheading='Sit amet consectetur'
-        date='Dec 2022 - Nov 2023'
-        imagePath='/src/assets/about-astro.png'
-        altText='Lorem, ipsum dolor sit'
-        imageClass='h-12 w-auto md:-start-16'
-      />
-    </Section> */
-      }
+      
+    </Section> 
+      
       <Section title='Education'>
         <Card
           as='a'
-          heading='Lorem ipsum'
-          subheading='Lorem ipsum dolor sit amet, vidit suscipit at mei.'
-          date='August 2021 - July 2025'
-          href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+          heading='北京大学'
+          subheading='元培学院 通用人工智能/计算机科学与技术 （意向）'
+          date='Sep. 2025 - Present'
+          href='https://yuanpei.pku.edu.cn/'
         >
-          {
-            /* <ul class='ms-4 list-disc text-muted-foreground'>
-          <li>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore debitis recusandae, ut
-            molestiae laboriosam pariatur!
-          </li>
-          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, pariatur!</li>
-        </ul> */
-          }
+           <img
+            class='absolute end-0 z-0 m-0 -my-3 h-full w-1/2 object-cover opacity-40'
+            src='/images/PKU.svg'
+          />
         </Card>
-      </Section>
-
-      <Section title='Website List'>
-        <div class='grid grid-cols-1 gap-3 sm:grid-cols-2'>
-          <ProjectCard
-            href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'
-            heading='Lorem ipsum'
-            subheading='dolor sit amet, oratio ornatus explicari pro ex'
-            imagePath='/src/assets/projects/alex-tyson-2BAXJ7ha74s-unsplash.jpg'
-          />
-          <ProjectCard
-            href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'
-            heading='Lorem ipsum'
-            subheading='dolor sit amet, oratio ornatus explicari pro ex'
-            imagePath='/src/assets/projects/angelica-teran-Bk9hpaXHK4o-unsplash.jpg'
-          />
-          <ProjectCard
-            href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'
-            heading='Lorem ipsum'
-            subheading='dolor sit amet, oratio ornatus explicari pro ex'
-            imagePath='/src/assets/projects/kseniia-zapiatkina-yATU3rg8tNI-unsplash.jpg'
-          />
-          <ProjectCard
-            href='/projects'
-            heading='More projects'
-            subheading='Check out more projects'
-            imagePath='/src/assets/projects/wen-qiao-g_w8I64FiO0-unsplash.jpg'
-          />
-        </div>
-      </Section>
-
-      <Section title='Certifications'>
         <Card
           as='a'
-          heading='Lorem ipsum'
-          subheading='Lorem ipsum dolor sit amet, vidit suscipit at mei. Quem denique mea id. Usu ei regione indoctum dissentiunt, cu meliore fuisset mei, vel quod voluptua ne. Ex dicat impedit mel, at eum oratio possit voluptatum. Dicat ceteros cu vim. Impetus fuisset ullamcorper pri cu, his posse iisque ad, aliquam honestatis usu id.'
-          date='July 2024'
-          href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'
-        />
+          heading='北京大学'
+          subheading='生命科学学院 保送旁听'
+          date='Sep. 2022 - June. 2025'
+          href='https://www.bio.pku.edu.cn/'
+        >
+           <img
+            class='absolute end-0 z-0 m-0 -my-3 h-full w-1/2 object-cover opacity-40'
+            src='/images/PKU.svg'
+          />
+        </Card>
+        <Card
+          as='a'
+          heading='长沙市第一中学'
+          subheading='生物竞赛组'
+          date='Sep. 2024 - Aug. 2025'
+          href='http://www.hnfms.com.cn//'
+        >
+           <img
+            class='absolute end-0 z-0 m-0 -my-3 h-full w-1/2 object-cover opacity-40'
+            src='/images/hnfms.png'
+          />
+        </Card>
       </Section>
-
       <Section title='Skills'>
-        <SkillLayout title='Languages' skills={languages} />
-        <SkillLayout title='Frontend' skills={frontend} />
-        <SkillLayout title='Backend' skills={backend} />
+        <SkillLayout title='Programming' skills={programming} />
+        <SkillLayout title='Tools' skills={tools} />
+        <SkillLayout title='Others' skills={others} />
       </Section>
     </div>
     <Quote class='mt-12' />

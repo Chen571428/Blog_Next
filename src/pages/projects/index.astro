@@ -5,18 +5,17 @@ import { Button, Collapse, Icon } from 'astro-pure/user'
 import PageLayout from '@/layouts/CommonPage.astro'
 import ProjectSection from '@/components/projects/ProjectSection.astro'
 import Sponsors from '@/components/projects/Sponsors.astro'
-import Sponsorship from '@/components/projects/Sponsorship.astro'
-import alipay from '@/assets/alipay-qrcode.jpg'
+// import Sponsorship from '@/components/projects/Sponsorship.astro'
+// import alipay from '@/assets/alipay-qrcode.jpg'
 import KeyIcon from '@/assets/icons/key.svg'
-import wechat from '@/assets/wechat-qrcode.jpg'
+// import wechat from '@/assets/wechat-qrcode.jpg'
 
 const headings = [
-  { depth: 2, slug: 'theme', text: 'Theme' },
-  { depth: 2, slug: 'programs', text: 'Programs' },
-  { depth: 2, slug: 'learnings', text: 'Learnings' },
+  // { depth: 2, slug: 'programs', text: 'Programs' },
+  // { depth: 2, slug: 'learnings', text: 'Learnings' },
   { depth: 2, slug: 'others', text: 'Others' },
-  { depth: 2, slug: 'gpg-signature', text: 'GPG Signature' },
-  { depth: 2, slug: 'sponsorship', text: 'Sponsorship' }
+  // { depth: 2, slug: 'gpg-signature', text: 'GPG Signature' },
+  // { depth: 2, slug: 'sponsorship', text: 'Sponsorship' }
 ]
 ---
 
@@ -24,20 +23,20 @@ const headings = [
   <p>Github Activities:</p>
   <p>
     <Image
-      src='https://ghchart.rshah.org/659eb9/cworld1'
+      src='https://ghchart.rshah.org/659eb9/chen571428'
       alt='github activities'
       inferSize
       loading='lazy'
     />
   </p>
-  <p>
+  <!-- <p>
     If you think it would be useful or interesting to collaborate on a project, you can donate to
     support my work or contact me to discuss a project.
   </p>
   <Button title='Checkout sponsorship' class='w-fit' href='#sponsorship'>
     <Icon class='size-5' name='receive-money' slot='before' />
-  </Button>
-
+  </Button> -->
+<!-- 
   <h2 id='theme'>Theme</h2>
   <ProjectSection
     projects={[
@@ -54,9 +53,9 @@ const headings = [
         ]
       }
     ]}
-  />
+  /> -->
 
-  <h2 id='programs'>Programs</h2>
+  <!-- <h2 id='programs'>Programs</h2>
   <ProjectSection
     projects={[
       {
@@ -122,52 +121,20 @@ const headings = [
         ]
       }
     ]}
-  />
+  /> -->
 
   <h2 id='others'>Others</h2>
   <ProjectSection
     projects={[
       {
-        name: 'CWorld',
-        description: "CWorld's Github",
-        links: [{ type: 'github', href: 'https://github.com/cworld1' }]
-      },
-      {
-        name: 'Arthals',
-        description: 'Arthals Github',
-        links: [{ type: 'github', href: 'https://github.com/zhuozhiyongde' }]
+        name: 'StatInfer',
+        description: "StatInfer's Github",
+        links: [{ type: 'github', href: 'https://github.com/chen571428' }]
       }
     ]}
   />
 
-  <!-- gpg signature -->
-  <h2 id='gpg-signature'>GPG Signature</h2>
-  <p>
-    You can verify the authenticity of the files I signed by checking the GPG signature. My GPG key
-    is <code>114514</code>, and you can find it on the opengpg key servers or download from it.
-  </p>
-  <Button href='https://keys.openpgp.org/search?q=114514' title='Checkout my key' target='_blank'>
-    <KeyIcon class='size-5' slot='before' />
-  </Button>
-
-  <!-- sponsorship -->
-  <h2 id='sponsorship'>Sponsorship</h2>
-  <p>Please leave a message or contact me proactively after sponsorship.</p>
-  <Sponsorship
-    methods={[
-      { name: 'WeChat', icon: 'wechat-pay', image: wechat },
-      { name: 'Alipay', icon: 'alipay', image: alipay }
-    ]}
-  />
-  <p>Thanks to the following sponsors:</p>
-  <Sponsors
-    sponsors={[
-      { name: 'C*a（酷安@暴走の蜗牛）', amount: '2.00', date: '2019-07-02' },
-      { name: '华雄(QQ：1300****71)', amount: '5.00', date: '2019-12-30' },
-      { name: '◌(QQ：1934****45)', amount: '3.00', date: '2019-12-30' },
-      { name: 'Anonymous', amount: '20.00', date: '2022-04-06' }
-    ]}
-  />
+ 
 </PageLayout>
 
 <style>
