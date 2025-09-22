@@ -1,6 +1,6 @@
 ---
 title: Revive
-description: '于是博客复活了'
+description: '博客复活了，人也能像它一样复活吗？'
 publishDate: 2025-09-23 01:07:08
 updatedDate: 2025-09-23 03:27:00
 tags:
