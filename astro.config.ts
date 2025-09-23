@@ -2,6 +2,7 @@ import { rehypeHeadingIds } from '@astrojs/markdown-remark'
 import vercel from '@astrojs/vercel'
 import AstroPureIntegration from 'astro-pure'
 import { defineConfig } from 'astro/config'
+import react from '@astrojs/react';
 import rehypeKatex from 'rehype-katex'
 import remarkMath from 'remark-math'
 import { remarkAlert } from 'remark-github-blockquote-alert'
@@ -50,6 +51,7 @@ export default defineConfig({
   },
 
   integrations: [
+    react(),
     // astro-pure will automatically add sitemap, mdx & unocss
     // sitemap(),
     // mdx(),

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plasmid Viewer</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+    }
+    #root {
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/seqviz@latest/dist/seqviz.min.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+  <script>
+    (function() {
+      const { SeqViz } = seqviz;
+      const root = ReactDOM.createRoot(document.getElementById('root'));
+
+      const urlParams = new URLSearchParams(window.location.search);
+      const fileUrl = urlParams.get('file');
+      const viewerType = urlParams.get('viewer') || 'circular';
+
+      if (!fileUrl) {
+        root.render(React.createElement('p', null, 'Error: No file specified. Please add a ?file=<path_to_file> parameter to the URL.'));
+        return;
+      }
+
+      fetch(fileUrl)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          return response.text();
+        })
+        .then(fileContent => {
+          root.render(
+            React.createElement(SeqViz, {
+              file: fileContent,
+              viewer: viewerType,
+              style: { height: "100%", width: "100%" }
+            })
+          );
+        })
+        .catch(error => {
+          console.error('Error fetching or rendering plasmid:', error);
+          root.render(React.createElement('p', null, `Error loading plasmid file: ${error.message}`));
+        });
+    })();
+  </script>
+</body>
+</html>

@@ -24,7 +24,9 @@
       "@/pages/*": ["src/pages/*"],
       "@/types": ["src/types/index.ts"],
       "@/site-config": ["src/site.config.ts"]
-    }
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
   },
   "exclude": ["node_modules", "**/node_modules/*", ".vscode", "dist", "public/scripts/*", "test/*"]
 }
