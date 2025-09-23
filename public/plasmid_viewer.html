@@ -30,7 +30,7 @@
 
       const urlParams = new URLSearchParams(window.location.search);
       const fileUrl = urlParams.get('file');
-      const viewerType = urlParams.get('viewer') || 'circular';
+      const viewerType = urlParams.get('viewer') || 'both';
 
       if (!fileUrl) {
         root.render(React.createElement('p', null, 'Error: No file specified. Please add a ?file=<path_to_file> parameter to the URL.'));
